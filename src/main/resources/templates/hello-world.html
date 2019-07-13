@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Hello World</title>
+  <link rel="stylesheet" th:href="@{/css/demo.css}">
 </head>
 <body>
-  <p th:text="'Time on the server is ' + ${date}"></p>
+  <p th:text="'Time on the server is ' + ${date}" class="test"></p>
 </body>
 </html>
