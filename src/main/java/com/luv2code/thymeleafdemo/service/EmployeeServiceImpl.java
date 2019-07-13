@@ -1,7 +1,7 @@
 package com.luv2code.thymeleafdemo.service;
 
 import com.luv2code.thymeleafdemo.dao.EmployeeRepository;
-import com.luv2code.thymeleafdemo.entity.Employee;
+import com.luv2code.thymeleafdemo.model.Employee;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public List<Employee> findAll() {
-        return employeeRepository.findAll();
+        return employeeRepository.findAllByOrderByLastNameAsc();
     }
 
     @Override

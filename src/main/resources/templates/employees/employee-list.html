@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -14,6 +15,7 @@
   <div class="container">
     <h3>Employee Directory</h3>
     <hr>
+    <a th:href="@{/employees/add-employee}" class="btn btn-primary btn-sm mb-3">Add Employee</a>
     <table class="table table-bordered table-striped">
       <thead class="thead-dark">
       <tr>
@@ -24,7 +26,7 @@
       <tbody>
       <tr th:each="employee : ${employees}">
         <td th:text="${employee.firstName}"></td>
-        <td th:text="${employee.lastName}"></td>
+        <td th:text="*{employee.lastName}"></td>
         <td th:text="${employee.email}"></td>
       </tr>
       </tbody>

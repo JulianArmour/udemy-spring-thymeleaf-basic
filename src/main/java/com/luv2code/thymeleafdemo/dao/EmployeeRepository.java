@@ -1,7 +1,10 @@
 package com.luv2code.thymeleafdemo.dao;
 
-import com.luv2code.thymeleafdemo.entity.Employee;
+import com.luv2code.thymeleafdemo.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+    List<Employee> findAllByOrderByLastNameAsc();
 }

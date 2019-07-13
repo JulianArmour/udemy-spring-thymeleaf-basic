@@ -1,6 +1,6 @@
 package com.luv2code.thymeleafdemo.service;
 
-import com.luv2code.thymeleafdemo.entity.Employee;
+import com.luv2code.thymeleafdemo.model.Employee;
 
 import java.util.List;
 

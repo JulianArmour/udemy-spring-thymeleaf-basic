@@ -1,4 +1,4 @@
-package com.luv2code.thymeleafdemo.entity;
+package com.luv2code.thymeleafdemo.model;
 
 import javax.persistence.*;
 
