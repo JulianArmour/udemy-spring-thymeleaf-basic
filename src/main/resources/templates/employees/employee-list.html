@@ -22,12 +22,21 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Email</th>
+        <th>Actions</th>
       </tr></thead>
       <tbody>
       <tr th:each="employee : ${employees}">
         <td th:text="${employee.firstName}"></td>
         <td th:text="*{employee.lastName}"></td>
         <td th:text="${employee.email}"></td>
+        <td>
+          <a th:href="@{/employees/update-employee(employeeId=${employee.id})}" class="btn btn-info btn-sm">Update</a>
+          <a th:href="@{/employees/delete-employee(employeeId=${employee.id})}"
+              class="btn btn-danger btn-sm"
+              onclick="if (!(confirm('Are you sure you want to delete this employee?'))) {return false}">
+            Delete
+          </a>
+        </td>
       </tr>
       </tbody>
     </table>
